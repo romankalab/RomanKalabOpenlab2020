@@ -1,4 +1,6 @@
 package com.appslab;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main
@@ -6,38 +8,22 @@ public class Main
 
     public static void main(String[] args)
     {
-        int a;
-        int b;
-        int c;
-        boolean answer;
-        Scanner memory = new Scanner(System.in);
+        List<Integer> numbers = new ArrayList<>();
+        Scanner input = new Scanner(System.in);
+        int numberCount;
 
-        System.out.print("Enter first side: ");
-        a = memory.nextInt();
-        System.out.print("Enter second side: ");
-        b = memory.nextInt();
-        System.out.print("Enter third side: ");
-        c = memory.nextInt();
+        System.out.print("How many numbers do you want to enter: ");
+        numberCount = input.nextInt();
 
-        answer = isItTriangle(a, b, c);
-
-        System.out.println();
-        if(answer)
-            System.out.print("This is a triangle.");
-        else
-            System.out.print("This isn't a triangle.");
-    }
-
-    public static boolean isItTriangle(int a, int b, int c)
-    {
-        if(a + b > c)
+        for (int index = 0; index<numberCount; index++)
         {
-            if(b + c > a)
-            {
-                if(a + c > b)
-                    return true;
-            }
+            System.out.print("Enter number: ");
+            numbers.add(input.nextInt());
         }
-        return false;
+        for (Integer number : numbers)
+        {
+            number = number * numberCount;
+            System.out.print(number + " ");
+        }
     }
 }
