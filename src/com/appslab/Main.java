@@ -15,15 +15,26 @@ public class Main
         System.out.print("How many numbers do you want to enter: ");
         numberCount = input.nextInt();
 
-        for (int index = 0; index<numberCount; index++)
+        for (int i = 0; i<numberCount; i++)
         {
             System.out.print("Enter number: ");
             numbers.add(input.nextInt());
         }
+
+        int x = 0;
         for (Integer number : numbers)
         {
-            number = number * numberCount;
-            System.out.print(number + " ");
+            if(x < numberCount - 1)
+            {
+                number = number * numberCount;
+                System.out.print(number + ", ");
+            }
+            else
+            {
+                number = number * numberCount;
+                System.out.print(number);
+            }
+            x++;
         }
     }
 }
