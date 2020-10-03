@@ -52,7 +52,6 @@ public class Main
                 x1++;
                 x2--;
             }
-            return firstHalf.toString().equals(secondHalf.toString());
 
         }
         else
@@ -68,7 +67,7 @@ public class Main
                 x1++;
                 x2--;
             }
-            return firstHalf.toString().equals(secondHalf.toString());
         }
+        return firstHalf.toString().equals(secondHalf.toString());
     }
 }
