@@ -5,20 +5,11 @@ public class Main
 
     public static void main(String[] args)
     {
-        Student student1 = new Student();
-        Student student2 = new Student();
+        Student student1 = new Student("John", 2, 123456, "Legionarska 1, 01001 Zilina");
+        Student student2 = new Student("Sam", 5, 456789, "Legionarska 2, 01001 Zilina");
 
-        student1.name = "John";
-        student1.studentNumber = 2;
-        student1.phoneNumber = 123456;
-        student1.address = "Legionarska 1, 01001 Zilina";
 
-        student2.name = "Sam";
-        student2.studentNumber = 5;
-        student2.phoneNumber = 456789;
-        student2.address = "Legionarska 2, 01001 Zilina";
-
-        System.out.println(student1.name + ", " + student1.studentNumber + ", " + student1.phoneNumber + ", " + student1.address);
-        System.out.print(student2.name + ", " + student2.studentNumber + ", " + student2.phoneNumber + ", " + student2.address);
+        System.out.println(student1.toString());
+        System.out.print(student2.getName() + ", " + student2.getStudentNumber() + ", " + student2.getPhoneNumber() + ", " + student2.getAddress());
     }
 }
