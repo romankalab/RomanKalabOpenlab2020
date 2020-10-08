@@ -16,7 +16,7 @@ public class Main {
     }
     public static double areaCheck(int sideA, int sideB, int sideC)
     {
-        double s = (sideA + sideB + sideC);
+        double s = (sideA + sideB + sideC) / 2;
         return Math.sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));
     }
     public static int perimeterCheck(int sideA, int sideB, int sideC)
