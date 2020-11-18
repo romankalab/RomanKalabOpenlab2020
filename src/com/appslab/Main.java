@@ -5,19 +5,11 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        Person Jack = new Person("Jack", 20, 5480);
-        Person Sam = new Person("Sam", 22, 6770);
-        Person Dan = new Person("Dan", 25, 4590);
-        Person Josh = new Person("Josh", 19, 3550);
-        List<Person> people = Arrays.asList(Jack, Sam, Dan, Josh);
+        Person John = new Person("John", 20, 5480);
+        Person Steve = new Person("Steve", 22, 6770);
+        Person Martin = new Person("Marin", 25, 4590);
+        List<Person> people = Arrays.asList(John, Steve, Martin);
 
-        System.out.println(people.stream().mapToInt(Person::getBudget).sum());
-
-        // int sum = 0;
-        // for(Person person : people)
-        // {
-        //    sum = sum + person.getBudget();
-        // }
-        // System.out.print(sum);
+        System.out.println(people.stream().anyMatch(person -> person.getName().contains("a")));
     }
 }
