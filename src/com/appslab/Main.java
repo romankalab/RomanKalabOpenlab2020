@@ -3,6 +3,9 @@ package com.appslab;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello AppsLab 2020! haa");
+        Programmer programmer = new Programmer(1542, 365);
+        Teacher teacher = new Teacher(850, 58);
+        programmer.getInfo();
+        teacher.getInfo();
     }
 }
