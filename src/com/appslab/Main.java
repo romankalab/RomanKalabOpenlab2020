@@ -1,40 +1,17 @@
 package com.appslab;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Main
 {
 
     public static void main(String[] args)
     {
-        List<Integer> numbers = new ArrayList<>();
-        Scanner input = new Scanner(System.in);
-        int numberCount;
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7);
 
-        System.out.print("How many numbers do you want to enter: ");
-        numberCount = input.nextInt();
-
-        for (int i = 0; i<numberCount; i++)
-        {
-            System.out.print("Enter number: ");
-            numbers.add(input.nextInt());
-        }
-
-        int x = 0;
-        for (Integer number : numbers)
-        {
-            if(x < numberCount - 1)
-            {
-                number = number * numberCount;
-                System.out.print(number + ", ");
-            }
-            else
-            {
-                number = number * numberCount;
-                System.out.print(number);
-            }
-            x++;
-        }
+        System.out.println(numbers.stream().map(number -> number * numbers.size()).collect(Collectors.toList()));
     }
 }
