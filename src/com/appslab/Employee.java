@@ -5,7 +5,8 @@ public class Employee {
     protected int bonus;
     protected enum Employment {
         PROGRAMMER("Programmer"),
-        TEACHER("Teacher");
+        TEACHER("Teacher"),
+        DRIVER("Driver");
 
         String job;
         Employment(String job) {
