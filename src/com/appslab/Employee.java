@@ -4,13 +4,23 @@ public class Employee {
     protected float salary;
     protected int bonus;
     protected enum Employment {
-        Programmer,
-        Teacher,
-        Driver
-    }
+        PROGRAMMER("Programmer"),
+        TEACHER("Teacher");
 
-    public Employee(float salary, int bonus) {
+        String job;
+        Employment(String job) {
+            this.job = job;
+        }
+    }
+    Employment employment;
+
+    public Employee(float salary, int bonus, Employment employment) {
         this.salary = salary;
         this.bonus = bonus;
+        this.employment = employment;
+    }
+
+    public void getInfo() {
+        System.out.println(employment.job + "'s salary is " + salary + " and bonus is " + bonus + ".");
     }
 }
