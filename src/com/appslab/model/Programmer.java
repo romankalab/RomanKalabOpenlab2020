@@ -1,4 +1,6 @@
-package com.appslab;
+package com.appslab.model;
+
+import com.appslab.model.Employee;
 
 public class Programmer extends Employee {
 
