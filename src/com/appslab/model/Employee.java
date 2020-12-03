@@ -24,4 +24,10 @@ public class Employee {
     public void getInfo() {
         System.out.println(employment.job + "'s salary is " + salary + " and bonus is " + bonus + ".");
     }
+    public double getSalary() {
+        return salary;
+    }
+    public int getBonus() {
+        return bonus;
+    }
 }

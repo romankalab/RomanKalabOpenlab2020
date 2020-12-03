@@ -1,10 +1,10 @@
 package com.appslab;
 
-public class EmployeeService {
-    public void fullSalary() {
-        System.out.print("a");
-    }
-    public void fullBonus() {
-        System.out.print("a");
-    }
+import com.appslab.model.Employee;
+
+import java.util.List;
+
+public interface EmployeeService {
+    void getTotalSalary(List<Employee> employments);
+    void getTotalBonus(List<Employee> employments);
 }
